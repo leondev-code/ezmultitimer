@@ -1,0 +1,52 @@
+body {
+    height:100%;
+    padding:0px;
+    margin:0px;
+}
+#container {
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    height:100vh; width:100%;
+}
+#newtimer {
+    width:100%;
+    height:50px;
+    border-style:none;
+    border-radius:20px;
+    background-color:greenyellow;
+}
+#newtimer:active {
+    background-color:rgb(140, 196, 57);
+}
+.timers {
+    display:flex;
+    align-items:center;
+    width:95%;
+    justify-content:space-between;
+    margin:20px;
+    padding:10px;
+    height:10vh;
+    border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+#timerOptions {
+    display:grid;
+    grid-template-columns:45% 45% 45% 45%;
+    grid-column-gap:20px;
+    width:100%;
+    overflow-x:scroll;
+}
+#timerList {
+    display:flex;
+    flex-direction:column;
+    justify-content:top;
+    align-items:center;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    height:50vh;
+}
