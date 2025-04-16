@@ -23,6 +23,7 @@ function startTimer(time) {
     timerText[timerText.length-1].appendChild(document.createTextNode(time));
     timerBox[timerText.length-1].appendChild(cancelButton[cancelButton.length - 1]);
     cancelButton[cancelButton.length - 1].onclick = cancelTimer(cancelButton.length - 1);
+    timerBox[timerBox.length-1].classList.add("timerBox");
 }
 
 setInterval(decreaseTimers, 1000);
@@ -49,5 +50,22 @@ function decreaseTimers() {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (!isMobile) {
-        alert("Please use a Phone to use this app, it looks kinda weird on landscape mode, but it still works. It's also possible that it creates issues, which i wont fix.");
+        alert("This app is intended for use with mobile devices. Please switch to a phone or tablet for the best experience.");
     }
+    function isScreenLockSupported() {
+        return ('wakeLock' in navigator);
+       }
+    async function requestWakeLock() {
+        if (isScreenLockSupported()) {
+            try {
+                const wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Screen Wake Lock is active');
+            } catch (err) {
+                console.error(`${err.name}, ${err.message}`);
+                alert('Failed to acquire wake lock. Some features may not work as expected. This might be a device issue.');
+            }
+        } else {
+            alert('This device does not support screen wake lock. Some features may not work as expected, unless you manually configure your device to stay awake.');
+        }      
+    }
+    requestWakeLock();
