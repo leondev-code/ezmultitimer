@@ -3,6 +3,9 @@ body {
     padding:0px;
     margin:0px;
 }
+#title {
+    font-family:"Lexend", sans-serif;
+}
 #container {
     display: flex;
     flex-direction:column;
@@ -57,4 +60,18 @@ box-shadow:  20px 20px 60px #bebebe,
     align-items:center;
     width:90%;
     padding:5px;
+}
+.timerText {
+    font-family:"Lexend", sans-serif;
+    font-size:20px;
+}
+h2 {
+    font-family:"Lexend", sans-serif;
+    font-size:30px;
+    font-weight:lighter;
+}
+.time {
+    font-family:"Lexend", sans-serif;
+    font-size:15px;
+    font-weight:light;
 }

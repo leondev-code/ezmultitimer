@@ -5,45 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Easy Multitimer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        </style>
 </head>
 <body>
     <div id="container">
-    <h1>Easy Multitimer 1.1</h1>
+    <h1 id="title">Easy Multitimer 1.2</h1>
     <div id="timerList" style="width:100%">
         
     </div>
     <div id="timerOptions">
         <div class="timers" onclick="startTimer(15)">
             <h2>Very Quick</h2>
-            <p>15s</p>
+            <p class="time">15s</p>
         </div>
         <div class="timers" onclick="startTimer(45)">
             <h2>Quick</h2>
-            <p>45s</p>
+            <p class="time">45s</p>
         </div>
         <div class="timers" onclick="startTimer(90)">
             <h2>Medium</h2>
-            <p>1min 30s</p>
+            <p class="time">1min 30s</p>
         </div>
         <div class="timers" onclick="startTimer(120)">
             <h2>Normal</h2>
-            <p>2min</p>
+            <p class="time">2min</p>
         </div>
         <div class="timers" onclick="startTimer(180)">
             <h2>Over-Average</h2>
-            <p>3min</p>
+            <p class="time">3min</p>
         </div>
         <div class="timers" onclick="startTimer(240)">
             <h2>Slow</h2>
-            <p>4min</p>
+            <p class="time">4min</p>
         </div>
         <div class="timers" onclick="startTimer(300)">
             <h2>Slower</h2>
-            <p>5min</p>
+            <p class="time">5min</p>
         </div>
         <div class="timers" onclick="startTimer(600)">
             <h2>Very slow</h2>
-            <p>10min</p>
+            <p class="time">10min</p>
         </div>
     </div>
 

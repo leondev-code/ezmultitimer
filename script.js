@@ -24,6 +24,8 @@ function startTimer(time) {
     timerBox[timerText.length-1].appendChild(cancelButton[cancelButton.length - 1]);
     cancelButton[cancelButton.length - 1].onclick = cancelTimer(cancelButton.length - 1);
     timerBox[timerBox.length-1].classList.add("timerBox");
+    timerText[timerText.length-1].classList.add("timerText");
+    cancelButton[cancelButton.length - 1].classList.add("cancelButton");
 }
 
 setInterval(decreaseTimers, 1000);
