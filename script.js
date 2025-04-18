@@ -3,6 +3,7 @@ let timerBox = [];
 let timerText = [];
 let cancelButton = [];
 let timerList = document.getElementById("timerList");
+let timerSound = new Audio("ringtone.mp3");
 function cancelTimer(index) {
     return function() {
         timers[index] = 0;
@@ -45,6 +46,7 @@ function decreaseTimers() {
             timerBox[i].style.backgroundColor="lime";
             timerText[i].innerHTML = "Finished";
             cancelButton[i].style.display = "none";
+            timerSound.play();
         }
     }
 }
